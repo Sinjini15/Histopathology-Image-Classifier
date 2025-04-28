@@ -26,6 +26,10 @@ def main():
     os.makedirs('outputs/metrics', exist_ok=True)
 
     labels, preds, probs = calculate_metrics(model, test_loader, device)
+    
+    test_accuracy = (labels == preds).mean()
+    print(f"Test Accuracy: {test_accuracy:.4f}")
+
 
     plot_roc_curve(labels, probs, 'outputs/metrics/roc_curve.png')
     plot_confusion_matrix(labels, preds, 'outputs/metrics/confusion_matrix.png')

@@ -1,0 +1,12 @@
+torch
+torchvision
+h5py
+scikit-learn
+matplotlib
+opencv-python
+torch>=2.0.0
+torchvision>=0.15.0
+h5py>=3.7.0
+scikit-learn>=1.0.2
+matplotlib>=3.5.0
+opencv-python>=4.5.5
